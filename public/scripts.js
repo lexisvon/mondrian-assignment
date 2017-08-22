@@ -11,4 +11,20 @@ window.addEventListener('load', function() {
 			event.target.style.backgroundColor = currrentColor;
 		});
 	}
+
+	// Save colors to csv
+	var savePainting = function(){
+		var boxColors =[];
+		for (var i = 0; i < rows.length; i++){
+			// if (rows[i].style.backgroundColor == ""){
+			// 	boxColors.push("white");
+			// } {
+			boxColors.push(rows[i].style.backgroundColor);
+		}
+		var data = "?saveArt=" + JSON.stringify(boxColors);
+		window.history.replaceState(null, null, "/" + data);
+
+		// saveToFile(boxColors)
+		return boxColors;
+	}
 });
