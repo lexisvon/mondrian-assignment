@@ -11,16 +11,13 @@ get "/" do
 	erb :index
 end 
 
-
 # GET /save_painting?savedArt=bwry,brrw,wwrb,wwwy
 get "/save_painting" do
-
 	colors = params['savedArt']
 	File.open("saves.txt", "a") do |line|
 		line.puts colors.chomp
 	end
 	erb :index
-	
 end
 
 # create post request to alert that it was saved

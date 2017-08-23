@@ -16,7 +16,7 @@ window.addEventListener('load', function() {
 	save.addEventListener('click', function(){
 		var paintColors = [];
 		for (var i = 0; i < rows.length; i++) {
-			paintColors.push(rows[i].style.backgroundColor);
+			paintColors.push(rows[i].style.backgroundColor.charAt(0));
 		}
 		row1 = [paintColors[0], paintColors[1], paintColors[2], paintColors[3]]
 		row2 = [paintColors[4], paintColors[5], paintColors[6], paintColors[7]]
